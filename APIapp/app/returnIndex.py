@@ -4,17 +4,14 @@ from django.shortcuts import render
 import requests
 
 
-def generate_request(url, params={}):
-    response = requests.get(url, params=params)
+def generate_request(url, auth):
+    response = requests.get(url, auth)
 
     if response.status_code == 200:
         return response.json()
 
-def returnIndex(request, params={
-    'api_key' : '5b8a92b6414f88d358bc39e8db7de2fef64417b6'
-
-}):
-    responseRe = generate_request('https://faucetpay.io/api/v1/currencies', params)
+def returnIndex(request):
+    responseRe = generate_request('https://faucetpay.io/api/v1/currencies', '95e72c3491c419b628e86626d39709d265ae91cd')
 
     if responseRe:
         statusService = {
