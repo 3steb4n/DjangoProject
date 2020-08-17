@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'h80&8i8)*p4a%4g0p$tx(oaph*s!vtb1z*c5*q3f5^(2o39(_n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = True #maquina local
+DEBUG = False #CPanel
 
-ALLOWED_HOSTS = ['kynda.xyz']
-
+ALLOWED_HOSTS = ['kynda.xyz'] #CPanel
+#ALLOWED_HOSTS = [] #maquina local
 
 # Application definition
 
