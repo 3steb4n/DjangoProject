@@ -18,7 +18,9 @@ def returnIndex(request):
 
     if responseRe:
         statusService = {
-            "context" : responseRe.get('status')
+            "status" : responseRe.get('status'),
+            "message" : responseRe.get('message'),
+            "currencies" : responseRe.get('currencies')
         }
 
     return render(request, 'index.html', statusService) #Anotar la ruta completa en settings/TEMPLATES - DIRS
