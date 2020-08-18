@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from APIapp.app.returnIndex import returnIndex
+from APIapp.app.Apis_Invoke.CheckAdress import returnCheckAdress
+from APIapp.app.Apis_Invoke.PayOuts import returnPayOut
 
 urlpatterns = [
     path('', returnIndex),
+    path('/PayOuts', returnPayOut),
+    path('/CheckAddres', returnCheckAdress),
 ]
