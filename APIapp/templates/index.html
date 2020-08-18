@@ -7,13 +7,13 @@
 </head>
 <body>
     <div>
-        <img src="{% static 'APIdjango/img/img_1.jpg' %}" alt="" width='300px'>
-        <p>
-            Status : {{ status }}
-            Message : {{ message }}
-            Currencies : {{ currency }}
-            Balance : {{ balance }}
-        </p>
+        <form action= "{% url 'returnPayOut' %}" method="GET">
+            <input type="submit" value="returnPayOut">
+        </form>
+        <br>
+        <form action= "{% url 'returnCheckAdress' %}" method="GET">
+            <input type="submit" value="returnCheckAdress">
+        </form>
     </div>
 </body>
 </html>
