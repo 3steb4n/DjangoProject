@@ -21,6 +21,6 @@ from APIapp.app.Apis_Invoke.PayOuts import returnPayOut
 
 urlpatterns = [
     path('', returnIndex),
-    path('/PayOuts', returnPayOut, name ='returnPayOut'),
-    path('/CheckAddres', returnCheckAdress, name = 'returnCheckAdress'),
+    path(r'^/PayOuts', returnPayOut, name ='returnPayOut'),
+    path(r'^/CheckAddres', returnCheckAdress, name = 'returnCheckAdress'),
 ]
