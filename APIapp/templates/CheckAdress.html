@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'APIdjango/css/index.css' %}">
+    <title>CheckAdress</title>
+</head>
+<body>
+    {% if responseRe == '200' %}
+        <p>
+        status : {{ status }}
+        message : {{ message }}
+        payout_user_hash : {{ payout_user_hash }}
+        </p>
+    {% else %}
+        <p>
+        status : {{ status }}
+        message : {{ message }}
+        </p>
+    {% endif %}
+</body>
+</html>
