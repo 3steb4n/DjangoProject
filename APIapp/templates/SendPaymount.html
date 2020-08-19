@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'APIdjango/css/index.css'%}">
+    <title>SendPayMount</title>
+</head>
+<body>
+    <p>
+        status:{{status}}
+        message:{{message}}
+        rate_limit_remaining:{{rate_limit_remaining}}
+        currency:{{currency}}
+        balance:{{balance}}
+        balance_bitcoin:{{balance_bitcoin}}
+        payout_id:{{payout_id}}
+        payout_user_hash:{{payout_user_hash}}
+    </p>
+</body>
+</html>
