@@ -18,9 +18,11 @@ from django.urls import path
 from APIapp.app.returnIndex import returnIndex
 from APIapp.app.Apis_Invoke.CheckAdress import returnCheckAdress
 from APIapp.app.Apis_Invoke.PayOuts import returnPayOut
+from APIapp.app.Apis_Invoke.SendPaymount import returnSendPayMount
 
 urlpatterns = [
     path('', returnIndex),
     path(r'^/PayOuts', returnPayOut, name ='returnPayOut'),
     path(r'^/CheckAddres', returnCheckAdress, name = 'returnCheckAdress'),
+    path(r'^/SendPayMount', returnSendPayMount, name = 'returnSendPayMount')
 ]
