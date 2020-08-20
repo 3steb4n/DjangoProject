@@ -2,21 +2,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>FaucetHome</title>
     <link rel="stylesheet" href="{% static 'APIdjango/css/index.css' %}">
 </head>
 <body>
-    <div>
-        <form action= "{% url 'returnPayOut' %}" method="GET">
-            <input type="submit" value="returnPayOut">
-        </form>
-        <br>
-        <form action= "{% url 'returnCheckAdress' %}" method="GET">
-            <input type="submit" value="returnCheckAdress">
-        </form>
-        <form action="{% url 'returnSendPayMount' %}" method="GET">
-            <input type="submit" value='returnSendPayMount'>
-        </form>
-    </div>
+
+    <section class="cover">
+        <nav>
+          <span class="logo">
+          FaucetHome
+        </span>
+        <ul>
+          <li>Home</li>
+          <li>FAQ</li>
+          <li>Support</li>
+        </ul>
+          <ul>
+            <li>Sign In</li>
+            <li class="ghost-btn">Sign up for free</li>
+          </ul>
+        </nav>
+        <div class="content">
+          <h2 class="heading">FaucetHome is the<br />ultimate Faucet.</h2>
+          <p>Earn money and withdraw to any of these wallets: FaucetPay, Coinbase, Paypal</p>
+          <div class="cta-btn">
+          <a href="#">Get Started</a>
+          </div>
+          <p class="highlight">0.01$ Free | When you register</p>
+          <div class="card">
+            <h2>Wordpress</h2>
+            <p>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
+          </div>
+        </div>
+
+        <div class="cta-btn">
+          <form action= "{% url 'returnPayOut' %}" method="GET">
+              <input type="submit" value="returnPayOut">
+          </form>
+          <br>
+          <form action= "{% url 'returnCheckAdress' %}" method="GET">
+              <input type="submit" value="returnCheckAdress">
+          </form>
+          <form action="{% url 'returnSendPayMount' %}" method="GET">
+              <input type="submit" value='returnSendPayMount'>
+          </form>
+      </div>
+
+      </section>
+
 </body>
 </html>
